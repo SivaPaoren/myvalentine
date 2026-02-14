@@ -1,0 +1,143 @@
+💖 VALENTINE'S DAY MICROSITE - SETUP INSTRUCTIONS 💖
+
+═══════════════════════════════════════════════════════════════
+📦 STEP 1: INSTALL DEPENDENCIES
+═══════════════════════════════════════════════════════════════
+
+1. Open your terminal/command prompt
+2. Navigate to this folder:
+   cd valentine-microsite
+
+3. Install all required packages:
+   npm install
+
+   Wait for it to complete (might take 1-2 minutes)
+
+═══════════════════════════════════════════════════════════════
+✏️ STEP 2: CUSTOMIZE YOUR CONTENT
+═══════════════════════════════════════════════════════════════
+
+A. ADD HER PHOTO:
+   - Place her photo in: src/assets/gf.jpg
+   - Best if square (1:1), at least 512x512px
+   - Supported formats: .jpg, .jpeg, .png
+
+B. PERSONALIZE TEXT:
+   - Open: src/App.jsx
+   - Find line 10 (CONFIG object)
+   - Replace:
+     * {{HER_NAME}} with her actual name
+     * {{YOUR_NAME}} with your name
+     * {{OPTIONAL_DATE}} with a date (optional)
+
+C. CUSTOMIZE MEMORIES (Optional):
+   - Open: src/components/MemoryGallery.jsx
+   - Edit the 'memories' array (starts around line 5)
+   - Change titles, descriptions, and emojis
+
+D. CUSTOMIZE TERMINAL MESSAGES (Optional):
+   - Open: src/components/Terminal.jsx
+   - Edit the 'commands' object (starts around line 5)
+   - Modify love messages, playlist, etc.
+
+═══════════════════════════════════════════════════════════════
+🚀 STEP 3: TEST LOCALLY
+═══════════════════════════════════════════════════════════════
+
+1. In your terminal, run:
+   npm run dev
+
+2. Open your browser to:
+   http://localhost:5173
+
+3. Test all features:
+   - Scroll through sections
+   - Try the memory gallery carousel
+   - Run the love calculator
+   - Type commands in the terminal
+   - Click "Yes" and "No" buttons
+
+═══════════════════════════════════════════════════════════════
+🌐 STEP 4: DEPLOY TO GITHUB PAGES
+═══════════════════════════════════════════════════════════════
+
+A. PREPARE YOUR GITHUB REPOSITORY:
+   1. Create a new repository on GitHub
+   2. Name it something like: valentine-microsite
+   3. Don't initialize with README (we already have one)
+
+B. UPDATE BASE PATH:
+   1. Open: vite.config.js
+   2. On line 6, change:
+      base: '/valentine-microsite/'
+      to match YOUR repository name
+
+C. CONNECT TO GITHUB:
+   In your terminal, run these commands:
+
+   git init
+   git add .
+   git commit -m "Initial commit - Valentine's microsite"
+   git branch -M main
+   git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+   git push -u origin main
+
+D. DEPLOY:
+   npm run deploy
+
+   This will automatically:
+   - Build your site
+   - Create a gh-pages branch
+   - Push it to GitHub
+
+E. ENABLE GITHUB PAGES:
+   1. Go to your GitHub repository
+   2. Click "Settings"
+   3. Scroll to "Pages" section
+   4. Under "Source", select:
+      - Branch: gh-pages
+      - Folder: / (root)
+   5. Click "Save"
+
+F. ACCESS YOUR SITE:
+   After 1-2 minutes, your site will be live at:
+   https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/
+
+═══════════════════════════════════════════════════════════════
+🎨 OPTIONAL CUSTOMIZATIONS
+═══════════════════════════════════════════════════════════════
+
+CHANGE BACKGROUND COLORS:
+- Open: src/index.css
+- Find line 10 (background: linear-gradient...)
+- Change the color codes to your preference
+
+ADD BACKGROUND MUSIC:
+- Place music.mp3 in: public/sounds/
+- Uncomment sound code in src/App.jsx (line 24-26)
+
+═══════════════════════════════════════════════════════════════
+❓ TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+ISSUE: "npm: command not found"
+FIX: Install Node.js from https://nodejs.org/
+
+ISSUE: Build fails
+FIX: Delete node_modules folder and run npm install again
+
+ISSUE: Site doesn't load on GitHub Pages
+FIX: Make sure the base path in vite.config.js matches your repo name
+
+ISSUE: Image doesn't show
+FIX: Make sure gf.jpg is in src/assets/ folder
+
+═══════════════════════════════════════════════════════════════
+📞 NEED HELP?
+═══════════════════════════════════════════════════════════════
+
+Check the README.md file for more detailed documentation.
+
+Good luck! Make her smile! 💖
+
+═══════════════════════════════════════════════════════════════
